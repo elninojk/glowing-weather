@@ -1,0 +1,64 @@
+array(11) 
+{ 
+	["coord"]=> array(2) 
+	{ 	
+		["lon"]=> float(-0.13) 
+		["lat"]=> float(51.51) 
+	} 
+	["sys"]=> array(6) 
+	{ 
+		["type"]=> int(1) 
+		["id"]=> int(5093) 
+		["message"]=> float(0.2073) 
+		["country"]=> string(2) "GB" 
+		["sunrise"]=> int(1408164507) 
+		["sunset"]=> int(1408216855) 
+	} 
+	["weather"]=> array(1) 
+		{ [0]=> array(4) 
+			{ 
+				["id"]=> int(801) 
+				["main"]=> string(6) "Clouds" 
+				["description"]=> string(10) "few clouds" 
+				["icon"]=> string(3) "02d" 
+			}
+		}	 
+	
+	["base"]=> string(12) "cmc stations" 
+	["main"]=> array(5) 
+			{ 
+			["temp"]=> float(290.66) 
+			["pressure"]=> int(1018) 
+			["humidity"]=> int(55) 
+			["temp_min"]=> float(289.15) 
+			["temp_max"]=> float(292.15) 
+			} 
+	["wind"]=> array(2) 
+			{ 
+			["speed"]=> float(9.3) 
+			["deg"]=> int(270) 
+			} 
+	["clouds"]=> array(1) 
+		{ 
+		["all"]=> int(20) 
+		} 
+	["dt"]=> int(1408215000) 
+	["id"]=> int(2643743) 
+	["name"]=> string(6) "London" 
+	["cod"]=> int(200) 
+	}
+
+
+
+Actual database table creation command
+
+	CREATE TABLE `test`.`weather` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `City` VARCHAR(45) NULL,
+  `Country` VARCHAR(45) NULL,
+  `Temp` VARCHAR(45) NULL,
+  `Condition` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+
+INSERT INTO `test`.`weather` (`id`, `City`, `Country`, `Temp`, `Condition`) VALUES ('1', 'kochin', 'India', '23', 'cloudy');
